@@ -1,0 +1,66 @@
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Migration_Devis extends CI_Migration {
+
+	public function up()
+	{
+		echo '<tr><td>table Devis</td>';
+		$this->dbforge->add_field(array(
+							'id' => array(
+	                        	'type' => 'INT',
+	                        	'constraint' => '11',
+	                        	'unsigned' => TRUE,
+	                        	'auto_increment' => TRUE
+	                        ),
+	                        'email' => array(
+	                        	'type' => 'VARCHAR',
+	                        	'constraint' => '100',
+	                        ),
+	                        'title' => array(
+	                            'type' => 'VARCHAR',
+	                            'constraint' => '100',
+	                        ),
+	                        'service' => array(
+	                            'type' => 'VARCHAR',
+	                            'constraint' => '200',
+	                        ),
+	                        'date' => array(
+	                            'type' => 'DATE',
+	                        ),
+	                        'message' => array(
+	                            'type' => 'TEXT',
+	                        ),
+				));
+				$this->dbforge->add_key('id',TRUE);
+                $this->dbforge->create_table('devis');
+                echo '<td><i class="fa fa-check"></i></td>';
+                $this->seed();
+                echo '<td><i class="fa fa-check"></i></td>';
+	}
+
+	public function down()
+	{
+				$this->dbforge->drop_table('devis');
+	}
+
+	public function seed()
+	{
+			$this->load->model('entities/devis');
+
+			$temporary_devis = new Devis();
+			for($i=0;$i<6;$i++)
+			{
+				$temporary_devis->email = 'devis@mail.com';
+				$temporary_devis->title='Devis title';
+				$temporary_devis->service='Service 1';
+				$temporary_devis->date=date('Y-m-d');
+				$temporary_devis->message='devis message ..';
+			}
+
+		$this->db->insert('devis',$temporary_devis);
+	}
+}
+
+?>
