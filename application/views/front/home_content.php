@@ -12,7 +12,7 @@
         <div class="page" id="top">
             
             <!-- Home Section -->
-            <section class="home-section  bg-dark-alfa-30 parallax-2" data-background="" id="home">
+            <section class="home-section  bg-dark-alfa-30 parallax-2" data-background="<?php echo asset_url(); ?>/img/full-width-images/section-bg-1.jpg" id="home">
                 <div class="js-height-full">											
                     
                     <!-- Hero Content -->
