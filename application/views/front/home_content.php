@@ -1,3 +1,4 @@
+
 <body class="appear-animate">
       
         <!-- Page Loader -->        
@@ -7,15 +8,15 @@
         <!-- End Page Loader -->
         
         <!-- Page Wrap -->
-        <div class ="youpelslider">
+       
         <div class="page" id="top">
             
             <!-- Home Section -->
-            <section class="home-section  bg-dark-alfa-30 parallax-2" data-background="images/full-width-images/section-bg-1.jpg" id="home">
-                <div class="js-height-full">
+            <section class="home-section  bg-dark-alfa-30 parallax-2" data-background="" id="home">
+                <div class="js-height-full">											
                     
                     <!-- Hero Content -->
-                    <div class="home-content youpelslider">
+                    <div class="home-content ">
                         <div class="home-text">
                             
                             <h1 class="hs-line-1 font-alt mb-80 mb-xs-30 mt-50 mt-sm-0">

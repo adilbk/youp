@@ -1,4 +1,3 @@
-		
 
 
   <!-- Foter -->
@@ -82,4 +81,10 @@
         <!--[if lt IE 10]><script type="text/javascript" src="<<?php echo asset_url(); ?>/js/placeholder.js"></script><![endif]-->
         
     </body>
+</html>
+		<script src="<?php echo asset_url(); ?>/js/plugins.js"></script>
+		<script src="<?php echo asset_url(); ?>/js/beetle.js"></script>
+
+	</body>
+
 </html>
